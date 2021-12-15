@@ -35,4 +35,4 @@ jobs:
         flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        jupyter nbconvert --to notebook --inplace --execute test_colab_session9.ipynb
+        jupyter nbconvert --to notebook --inplace --execute test_colab_session9.ipynb --stdout --ExecutePreprocessor.kernel_name=python --ExecutePreprocessor.enabled=True
